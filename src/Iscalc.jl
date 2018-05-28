@@ -18,9 +18,5 @@ export JCorridos
 
 println("\n\nISCALC - versão 0.3.2 <2017-04-25>")
 
-# Create empty auth token if none exists
-if !isfile(joinpath(dirname(@__FILE__),"..auth_token.jl"))
-    set_auth_token("")
-end
 
 end # module
