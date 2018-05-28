@@ -6,13 +6,6 @@
 
 using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams
 
-function quandl(simbolos, inicio, fim) 
-    resp = Requests.get("$(NYSE_NASDAQ).csv?ticker=$(simbolos)&date.gte=$(inicio)&date.lte=$(fim)&api_key=DQw1bXYU8NieGQKTYnJy")
-end
-
-
-const NYSE_NASDAQ = "https://www.quandl.com/api/v3/datatables/WIKI/PRICES" 
-
 const FXALL = [:AUD	:BGN	:BRL	:CAD	:CHF	:CNY	:CYP	:CZK	:DKK	:EEK	:GBP	:GRD	:HKD	:HRK	:HUF	:IDR	:ILS	:INR	:ISK	:JPY	:KRW	:LTL	:LVL	:MTL	:MXN	:MYR	:NOK	:NZD	:PHP	:PLN	:RON	:RUB	:SEK	:SGD	:SIT	:SKK	:THB	:TRY	:USD	:ZAR    :FX] 
 const FXsimbolo = [:USD :JPY :GBP :CHF :HKD] 
 
@@ -45,17 +38,17 @@ function conformar(a::String)
 end
 
 # Download/Ler de URL Remoto/Ficheiro dados em formato CSV usando TextParse  
-function download(fonte, separador=','; saltar=0, datatipo="y-m-d", header=true, na = [""]) 
-    if na == [""]
-        return TextParse.csvread(fonte, separador, skiplines_begin = saltar,header_exists=header)
-    else
-        return TextParse.csvread(
-            fonte,
-            skiplines_begin = saltar,
-            header_exists = header,
-            colparsers = [TextParse.DateTimeToken(Date, DateFormat(datatipo)), TextParse.NAToken(TextParse.Numeric(Float64), nastrings = na)])
-    end
-end
+#function download(fonte, separador=','; saltar=0, datatipo="y-m-d", header=true, na = [""]) 
+#    if na == [""]
+#        return TextParse.csvread(fonte, separador, skiplines_begin = saltar,header_exists=header)
+#    else
+#        return TextParse.csvread(
+#            fonte,
+#            skiplines_begin = saltar,
+#            header_exists = header,
+#            colparsers = [TextParse.DateTimeToken(Date, DateFormat(datatipo)), TextParse.NAToken(TextParse.Numeric(Float64), nastrings = na)])
+#    end
+#end
 
 # Ingerir dados obtidos por TextParse para uma tabela de JuliaDB
 #    textp -  TextParse

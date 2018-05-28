@@ -19,14 +19,6 @@ const mercado2mic=Dict(
 
 const df1 = DateFormat("dd uuu yyyy");
 
-function conformar(a::String)
-    if a[1:4] == "http"
-        return  IOBuffer(HTTP.get(a).body)
-    else 
-        return a
-    end
-end
-
 # Download/Ler de URL Remoto/Ficheiro dados em formato CSV usando TextParse  
 function download(fonte, delim = "," ; saltar=0, datatipo="y-m-d", header=true, na = [""]) 
     try
