@@ -14,6 +14,8 @@ include("GetData.jl")
 include("OT.jl")      
 include("API.jl")
 
+export JCorridos
+
 println("\n\nISCALC - versão 0.3.2 <2017-04-25>")
 
 # Create empty auth token if none exists
