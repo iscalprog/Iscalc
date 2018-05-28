@@ -7,7 +7,7 @@ module Iscalc
 # using SQLite
 # in that order in a fresh Julia session to ensure the conversion methods get defined
 
-using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams, Missings, Roots
+using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams, Missings, Roots, LatexStrings
 using BusinessDays, OnlineStats
 #using IJulia
 #using Compat
@@ -19,7 +19,7 @@ include("API.jl")
 export obter, JCorridos, FluxosCaixa, fspot, fdesconto
 export euronextBonds, factsheet, catalogo
 export load, save, table, column, join, merge, stack, unstack, select, reduce   #JUliaDB
-
+export latexstring # Latexstrings
 println("\n\nISCALC - versão 0.3.2 <2017-04-25>")
 
 
