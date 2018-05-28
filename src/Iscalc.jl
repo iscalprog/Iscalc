@@ -19,6 +19,7 @@ include("API.jl")
 export obter, JCorridos, FluxosCaixa, fspot, fdesconto
 export euronextBonds, factsheet, catalogo
 export load, save, table, column, join, merge, stack, unstack, select, reduce   #JUliaDB
+export Mean, Quantile, Variance, Hist, value # OnlineStats 
 export latexstring # Latexstrings
 println("\n\nISCALC - versão 0.3.3 <2018-04-25>")
 
