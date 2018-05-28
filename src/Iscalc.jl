@@ -17,7 +17,8 @@ include("OT.jl")
 include("API.jl")
 
 export obter, JCorridos, FluxosCaixa, fspot, fdesconto
-export euronextBonds, factsheet, catalogo 
+export euronextBonds, factsheet, catalogo
+export JuliaDB.load, JuliaDB.table, JuliaDB.column
 
 println("\n\nISCALC - versão 0.3.2 <2017-04-25>")
 
