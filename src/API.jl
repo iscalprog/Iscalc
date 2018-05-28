@@ -59,7 +59,7 @@ function DiasCorridos(DataReferencia,Mes,Dia)
     return Dates.value(DiasJurosCorridos), DataCouponPago
 end
 
-function JCorridos(dados)
+function JCorridos(dados,DataReferencia)
     NEmissões = size(dados)[1] 
     a = []
     for i = 1:NEmissões
@@ -79,7 +79,7 @@ function JCorridos(dados)
     return JuliaDB.table(a[1,:], a[2,:], a[3,:], a[4,:], a[5,:], a[6,:],a[7,:], names=[:ISIN, :UCouponPago,:DCorridos, :TxCoupon, :JCorridos, :PLimpo, :PLiquid], pkey=(:ISIN))
 end
 
-function FluxosCaixa(dados)
+function FluxosCaixa(dados,DataReferencia)
     NEmissões = size(dados)[1]
     b=[]
     for i = 1:NEmissões
