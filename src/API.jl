@@ -1,5 +1,5 @@
 #using BenchmarkTools, Roots, Distributions
-# Input fro muser
+# Input from user
 
 function input(prompt::String = "")::String
     print(prompt)
