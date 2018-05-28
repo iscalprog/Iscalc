@@ -1,4 +1,9 @@
 #using BenchmarkTools, Roots, Distributions
+# Input fro muser
+function input(prompt::String = "")::String
+    print(prompt)
+    return chomp(readline())
+end
 
 
 function fdesc(r,t,compos = 'c')
