@@ -16,7 +16,8 @@ include("GetData.jl")
 include("OT.jl")      
 include("API.jl")
 
-export JCorridos, obter
+export obter, JCorridos, FluxosCaixa, fspot, fdesconto
+export euronextBonds, factsheet, catalogo 
 
 println("\n\nISCALC - versão 0.3.2 <2017-04-25>")
 
