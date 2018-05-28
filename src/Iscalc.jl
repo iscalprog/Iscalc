@@ -1,3 +1,5 @@
+VERSION >= v"0.6.0" && __precompile__(true)
+
 module Iscalc
 
 # Make sure you do
