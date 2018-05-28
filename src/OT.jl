@@ -1,5 +1,5 @@
-using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams
-using Missings
+#using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams
+#using Missings
 
 
 const mercado2mic=Dict(

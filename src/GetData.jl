@@ -4,7 +4,7 @@
 # Header Row = 1
 # Rows to Exclude = 0
 
-using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams
+#using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams
 
 const FXALL = [:AUD	:BGN	:BRL	:CAD	:CHF	:CNY	:CYP	:CZK	:DKK	:EEK	:GBP	:GRD	:HKD	:HRK	:HUF	:IDR	:ILS	:INR	:ISK	:JPY	:KRW	:LTL	:LVL	:MTL	:MXN	:MYR	:NOK	:NZD	:PHP	:PLN	:RON	:RUB	:SEK	:SGD	:SIT	:SKK	:THB	:TRY	:USD	:ZAR    :FX] 
 const FXsimbolo = [:USD :JPY :GBP :CHF :HKD] 
