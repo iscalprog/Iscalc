@@ -7,9 +7,10 @@ module Iscalc
 # using SQLite
 # in that order in a fresh Julia session to ensure the conversion methods get defined
 
-using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, SQLite, DataStreams, Missings, Roots, LaTeXStrings
+using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, DataStreams, Missings, Roots, LaTeXStrings
 using BusinessDays, OnlineStats
-#using IJulia
+
+#using IJulia, SQLite
 #using Compat
 
 include("GetData.jl")   
