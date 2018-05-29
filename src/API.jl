@@ -157,8 +157,9 @@ function fspot(nss, tenores, janela_obs = 1:400)
             push!(a, spot)
         end
     end
+    println(datas)
     fdes = reshape(a,NTenores,:)
-    return fdes', datas
+    return fdes'
 end
 
 function fcaixa(tcoupon,freq, mat, capital, amort=false)
