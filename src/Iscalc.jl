@@ -22,7 +22,7 @@ export euronextBonds, factsheet, catalogo
 export load, save, table, column, join, merge, stack, unstack, select, reduce   #JUliaDB
 export Mean, Quantile, Variance, Hist, value # OnlineStats 
 export latexstring # Latexstrings
-println("\nISCAL|C - versão 0.3.3 <2018-04-25>")
+println("\nISCALC  V0.3.4 <2018-04-25>")
 
 
 end # module
