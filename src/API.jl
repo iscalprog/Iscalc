@@ -141,9 +141,11 @@ function fspot(nss, tenores, janela_obs = 1:400)
     nobs = length(nss) # Número datas disponíveis para os parâmetros NSS  
     NTenores = length(tenores)
     a = []
+    datas = []
     nobs_plus = nobs + 1 # Se janela_obs começar em 1 então ordem obs = nobs 
     for i = janela_obs
         obs = nobs_plus - i
+        push!(datas, nss[obs][1])
         b0 = nss[obs][2]
         b1 = nss[obs][3]
         b2 = nss[obs][4]
@@ -156,7 +158,7 @@ function fspot(nss, tenores, janela_obs = 1:400)
         end
     end
     fdes = reshape(a,NTenores,:)
-    return fdes'
+    return fdes' datas
 end
 
 function fcaixa(tcoupon,freq, mat, capital, amort=false)
