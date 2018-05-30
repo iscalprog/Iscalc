@@ -134,7 +134,7 @@ function fdesconto(nss, tenores, janela_obs = 1:400)
             push!(a, desc)
         end
     end
-    fdes = reshape(a,NTenores,:)
+    fdes = reshape(a,NTenores+1,:)
     return permutedims(fdes, [2,1]) # Transposta: fdesc' não funciona pois temos datas
 end
 
@@ -158,7 +158,7 @@ function fspot(nss, tenores, janela_obs = 1:400)
         end
     end
     funspot = reshape(a, NTenores + 1,:)
-    return permutedims(funspot, [2,1]) 
+    return permutedims(funspot, [2,1]) # Transposta: funspot' não funciona pois temos datas
 end
 
 function fcaixa(tcoupon,freq, mat, capital, amort=false)
