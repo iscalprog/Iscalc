@@ -157,7 +157,7 @@ function fspot(nss, tenores, janela_obs = 1:400)
         end
     end
     fdes = reshape(a,NTenores,:)
-    return fdes'
+    return permutedims(fdes, [2,1])
 end
 
 function fcaixa(tcoupon,freq, mat, capital, amort=false)
