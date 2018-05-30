@@ -145,6 +145,7 @@ function fspot(nss, tenores, janela_obs = 1:400)
     nobs_plus = nobs + 1 # Se janela_obs começar em 1 então ordem obs = nobs 
     for i = janela_obs
         obs = nobs_plus - i
+        datas = nss[obs][1] 
         b0 = nss[obs][2]
         b1 = nss[obs][3]
         b2 = nss[obs][4]
@@ -156,8 +157,8 @@ function fspot(nss, tenores, janela_obs = 1:400)
             push!(a, spot)
         end
     end
-    fdes = reshape(a,NTenores,:)
-    return permutedims(fdes, [2,1])
+    fdes = reshape(a,NTenores+1,:)
+    return permutedims(fdes, [2,1]) # Experiência: Em vez de transposta
 end
 
 function fcaixa(tcoupon,freq, mat, capital, amort=false)
