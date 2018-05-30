@@ -141,11 +141,10 @@ function fspot(nss, tenores, janela_obs = 1:400)
     nobs = length(nss) # Número datas disponíveis para os parâmetros NSS  
     NTenores = length(tenores)
     a = []
-    datas = []
     nobs_plus = nobs + 1 # Se janela_obs começar em 1 então ordem obs = nobs 
     for i = janela_obs
         obs = nobs_plus - i
-        datas = nss[obs][1] 
+        push!(a, nss[obs][1]) 
         b0 = nss[obs][2]
         b1 = nss[obs][3]
         b2 = nss[obs][4]
@@ -153,7 +152,7 @@ function fspot(nss, tenores, janela_obs = 1:400)
         tau = nss[obs][6]
         tau2 = nss[obs][7]
         for m in tenores
-            spot =  b0 + b1*(1 - exp(-m/tau))/(m/tau) + b2*((1 - exp(-m/tau)) /(m/tau) - exp(-m/tau)) + b3*((1 - exp(-m/tau2))/(m/tau2) - exp(-m/tau2)) 
+            spot =  b0 + b1*(1 - exp(-m/tau))/(m/tau) + b2*((1 - exp(-m/tau)) /(m/tau) - exp(-m/tau)) + b3*((1 - exp(-m/tau2))/(m/tau2) - exp(-m/tau2))
             push!(a, spot)
         end
     end
