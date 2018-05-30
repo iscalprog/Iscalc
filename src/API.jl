@@ -134,7 +134,7 @@ function fdesconto(nss, tenores, janela_obs = 1:400)
             push!(a, desc)
         end
     end
-    fdes = reshape(a,NTenores+1,:)
+    fdes = reshape(a, NTenores + 1, :)
     return permutedims(fdes, [2,1]) # Transposta: fdesc' não funciona pois temos datas
 end
 
