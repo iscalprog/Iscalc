@@ -156,8 +156,7 @@ function fspot(nss, tenores, janela_obs = 1:400)
             push!(a, spot)
         end
     end
-    fdes = reshape(a,NTenores+1,:)
-    println(fdes)
+    fdes = reshape(a, NTenores + 1,:)
     return permutedims(fdes, [2,1]) # Experiência: Em vez de transposta
 end
 
