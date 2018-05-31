@@ -8,7 +8,7 @@ module Iscalc
 # in that order in a fresh Julia session to ensure the conversion methods get defined
 
 using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, DataStreams, Missings, Roots, LaTeXStrings
-using BusinessDays, 
+using BusinessDays
 
 #using IJulia, SQLite
 #using Compat
