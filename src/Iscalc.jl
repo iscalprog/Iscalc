@@ -8,7 +8,7 @@ module Iscalc
 # in that order in a fresh Julia session to ensure the conversion methods get defined
 
 using Base.Dates, Requests, JuliaDB, CSV, FileIO, DataFrames, TextParse, HTTP, DataStreams, Missings, Roots, LaTeXStrings
-using BusinessDays, OnlineStats
+using BusinessDays, 
 
 #using IJulia, SQLite
 #using Compat
@@ -20,9 +20,8 @@ include("API.jl")
 export obter, JCorridos, FluxosCaixa, fspot, fdesconto
 export euronextBonds, factsheet, catalogo
 export load, save, table, column, join, merge, stack, unstack, select, reduce   #JUliaDB
-export Mean, Quantile, Variance, Hist, value # OnlineStats 
 export latexstring # Latexstrings
-println("\nISCALC  V0.3.4 <2018-04-25>")
+println("\nISCALC V0.3.4 <2018-04-25>")
 
 
 end # module
